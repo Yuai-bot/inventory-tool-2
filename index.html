@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>童裝網店貨品存貨管理工具</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Import Google Fonts (via fallback if unavailable) -->
+  <style>
+    /* Fallback font in case external fonts cannot be loaded */
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+    body { font-family: 'Fredoka One', sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <header>
+      <h1>童裝網店存貨管理</h1>
+      <p>為每件貨品自動生成8位英數貨品編號</p>
+    </header>
+
+    <!-- Product form -->
+    <section class="form-section">
+      <h2>新增貨品</h2>
+      <form id="product-form">
+        <div class="input-group">
+          <label for="product-name">貨品名稱</label>
+          <input type="text" id="product-name" name="product-name" required placeholder="輸入貨品名稱" />
+        </div>
+        <div class="input-group">
+          <label for="product-qty">數量</label>
+          <input type="number" id="product-qty" name="product-qty" min="0" step="1" required placeholder="輸入數量" />
+        </div>
+        <div class="input-group">
+          <label for="product-price">價格</label>
+          <!-- 價格為可選輸入，因此不使用 required 屬性 -->
+          <input type="number" id="product-price" name="product-price" min="0" step="0.01" placeholder="輸入價格 (可選)" />
+        </div>
+        <button type="submit" class="btn">加入貨品</button>
+      </form>
+    </section>
+
+    <!-- Inventory list -->
+    <section class="list-section">
+      <h2>貨品列表</h2>
+      <table id="inventory-table">
+        <thead>
+          <tr>
+            <th>貨品編號</th>
+            <th>名稱</th>
+            <th>數量</th>
+            <th>價格 (£)</th>
+          </tr>
+        </thead>
+        <tbody id="inventory-body">
+          <!-- Dynamically added rows will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- Background image section -->
+  <div class="background-image"></div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

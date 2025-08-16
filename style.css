@@ -1,0 +1,160 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka One', sans-serif;
+  background-color: #fdf6f8; /* very light pink base */
+  color: #574f7d; /* soft purple for text */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Container to hold content */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(3px);
+  padding: 2rem;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #e981a0; /* pastel pink */
+}
+
+header p {
+  font-size: 1rem;
+  color: #a17fb8; /* pastel purple */
+}
+
+/* Form section */
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e7a452; /* pastel orange */
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #574f7d;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e4d4f2;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #faf5ff;
+  color: #574f7d;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #e981a0;
+  box-shadow: 0 0 0 2px rgba(233, 129, 160, 0.3);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #8ecae6; /* pastel blue */
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7bbcd4;
+}
+
+/* Table styles */
+.list-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e7a452;
+}
+
+#inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#inventory-table thead {
+  background-color: #ffe6f0;
+  color: #574f7d;
+}
+
+#inventory-table th,
+#inventory-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #f3e0f5;
+  font-size: 0.95rem;
+}
+
+#inventory-table tbody tr:nth-child(even) {
+  background-color: #fff2f8;
+}
+
+#inventory-table tbody tr:nth-child(odd) {
+  background-color: #fdf6fb;
+}
+
+/* Background illustration overlay.  An opacity of 0.45 keeps the animals visible without distracting */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .form-section h2,
+  .list-section h2 {
+    font-size: 1.25rem;
+  }
+}
